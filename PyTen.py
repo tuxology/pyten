@@ -133,7 +133,31 @@ class PyTen(object):
 		f.write(txt)
 		f.write(now.strftime("	:	%H:%M\n"))
 		f.close()
-	
+
+	def on_tick4_clicked(self, wiget):
+		txt = self.entry4.get_text()
+		f = open("tasks.txt" , 'a')
+		f.write("4. 	") 
+		f.write(txt)
+		f.write(now.strftime("	:	%H:%M\n"))
+		f.close()
+
+	def on_tick5_clicked(self, wiget):
+		txt = self.entry5.get_text()
+		f = open("tasks.txt" , 'a')
+		f.write("5. 	") 
+		f.write(txt)
+		f.write(now.strftime("	:	%H:%M\n"))
+		f.close()
+
+	def on_tick6_clicked(self, wiget):
+		txt = self.entry6.get_text()
+		f = open("tasks.txt" , 'a')
+		f.write("6. 	") 
+		f.write(txt)
+		f.write(now.strftime("	:	%H:%M\n"))
+		f.close()
+
 if __name__ == "__main__":
 	app = PyTen()
 	app.window_main.show()
