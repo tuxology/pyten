@@ -63,6 +63,7 @@ class PyTen(object):
 
 	def on_checkin_clicked(self, widget):
 		self.dialog_checkin.show()
+		now = datetime.datetime.now()
 		self.checkin_label.set_text(now.strftime("Checked In : %Y-%m-%d %H:%M"))
 		f = open("tasks.txt" , 'w')
 		f.write("\n------------------------------------------------------\n")
@@ -74,6 +75,7 @@ class PyTen(object):
 
 	def on_checkout_clicked(self, widget):
 		self.dialog_checkout.show()
+		now = datetime.datetime.now()
 		self.checkout_label.set_text(now.strftime("Checked Out : %Y-%m-%d %H:%M"))
 		f = open("tasks.txt" , 'a')
 		f.write("\n------------------------------------------------------\n")
@@ -89,6 +91,9 @@ class PyTen(object):
 
 	def on_ok1_clicked(self, widget):
 		self.dialog_checkin.destroy()
+
+#	def on_dialog_checkin_destroy(self, widget):
+#		self.dialog_checkin.destroy()	
 		
 # Show "tasks.txt" file when "View Report" is clicked. Text send to 'buffer' first.
 
@@ -98,7 +103,7 @@ class PyTen(object):
 		txt = f.read()
 		self.buffer.set_text(txt)
 		f.close()
-
+		
 # Show "About" dialog
 
 	def on_about_clicked(self, wiget):
@@ -112,50 +117,56 @@ class PyTen(object):
 
 	def on_tick1_clicked(self, wiget):
 		txt = self.entry1.get_text()
+		now = datetime.datetime.now()
 		f = open("tasks.txt" , 'a')
 		f.write("1.	") 
 		f.write(txt)
-		f.write(now.strftime("	:	%H:%M\n"))
+		f.write(now.strftime("		:	%H:%M\n"))
 		f.close()
 
 	def on_tick2_clicked(self, wiget):
 		txt = self.entry2.get_text()
+		now = datetime.datetime.now()
 		f = open("tasks.txt" , 'a')
 		f.write("2. 	") 
 		f.write(txt)
-		f.write(now.strftime("	:	%H:%M\n"))
+		f.write(now.strftime("		:	%H:%M\n"))
 		f.close()
 
 	def on_tick3_clicked(self, wiget):
 		txt = self.entry3.get_text()
+		now = datetime.datetime.now()
 		f = open("tasks.txt" , 'a')
 		f.write("3. 	") 
 		f.write(txt)
-		f.write(now.strftime("	:	%H:%M\n"))
+		f.write(now.strftime("		:	%H:%M\n"))
 		f.close()
 
 	def on_tick4_clicked(self, wiget):
 		txt = self.entry4.get_text()
+		now = datetime.datetime.now()
 		f = open("tasks.txt" , 'a')
 		f.write("4. 	") 
 		f.write(txt)
-		f.write(now.strftime("	:	%H:%M\n"))
+		f.write(now.strftime("		:	%H:%M\n"))
 		f.close()
 
 	def on_tick5_clicked(self, wiget):
 		txt = self.entry5.get_text()
+		now = datetime.datetime.now()
 		f = open("tasks.txt" , 'a')
 		f.write("5. 	") 
 		f.write(txt)
-		f.write(now.strftime("	:	%H:%M\n"))
+		f.write(now.strftime("		:	%H:%M\n"))
 		f.close()
 
 	def on_tick6_clicked(self, wiget):
 		txt = self.entry6.get_text()
+		now = datetime.datetime.now()
 		f = open("tasks.txt" , 'a')
 		f.write("6. 	") 
 		f.write(txt)
-		f.write(now.strftime("	:	%H:%M\n"))
+		f.write(now.strftime("		:	%H:%M\n"))
 		f.close()
 
 if __name__ == "__main__":
