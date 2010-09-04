@@ -1,0 +1,28 @@
+AN INTRODUCTION TO PyTen
+
+PyTen is short for Python Task Evaluation. Its a small GUI application which is written in Python and designed using Glade 3. It is used to jot down your daily task-list and log their completion time too. Facility for check-In/check-out time logging and daily report viewing is also present.
+
+REQUIREMENTS
+
+Before using Pyten, you may need to have the following stuff in your system :
+1. Python
+2. Glade
+3. PyGTK2.x
+
+USING PyTen
+
+The current version of PyTen is actually pretty easy to use. Follow the steps to use PyTen :
+1. cd to the directory where PyTen is present. Run ./PyTen.py from the terminal. You will then get a main window titled Python Task Evaluation.
+2. At the start of each day, you are supposed to click the Check-in button, then the Ok button in the window that follows. This will log in your Checked-In time to the tasks.txt log file.
+3. Write your daily important tasks you wish to complete, according to their priority in the six text fields that are in the main window. Leave the application running throughout the day.
+4. Whenever any of your task has been completed, just click on the tick against each task at that time. This task completion time will also be logged in the tasks.txt file.
+5. When the day ends, just click Check-Out. Click Ok in the windows that follows.
+6. Click View Report to see what all you have accomplished during the day.
+
+TODO
+
+* Application should minimize to panel upon exit.
+* Remove all the useless bugs
+* Learn Python more & more :)
+
+
